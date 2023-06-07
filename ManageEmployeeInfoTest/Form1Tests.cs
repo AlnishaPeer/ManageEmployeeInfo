@@ -40,8 +40,8 @@ namespace ManageEmployeeInfo.Tests
         {
             EmployeeInfo empinfo = new EmployeeInfo()
             {
-                Name = "testuser2",
-                Email = "testuseremail2@gmail.com",
+                Name = "usertest",
+                Email = "usertestnew@gmail.com",
                 Gender = "male",
                 Status = "inactive"
             };
@@ -69,11 +69,11 @@ namespace ManageEmployeeInfo.Tests
 
             EmployeeInfo empinfo = new EmployeeInfo()
             {
-                Id = 2565267,
-                Name = "Chatura",
-                Email = "chatura_abbott@osinski.gmail.example",
+                Id = 2565231,
+                Name = "Akshat Khatri CPA",
+                Email = "khatri_akshat_cpa@schinner.com",
                 Gender = "male",
-                Status = "active"
+                Status = "inactive"
             };
             try
             {
@@ -99,7 +99,7 @@ namespace ManageEmployeeInfo.Tests
         {
             try
             {
-                var jsonResponse = await RestHelper.DeleteEmployee(2565265);
+                var jsonResponse = await RestHelper.DeleteEmployee(2565232);
                 var employee = JsonConvert.DeserializeObject<EmployeeInfo>(jsonResponse);
                 Assert.IsNull(employee);
             }
@@ -117,7 +117,7 @@ namespace ManageEmployeeInfo.Tests
         {
             try
             {
-                var jsonResponse = await RestHelper.SearchById(2565270);
+                var jsonResponse = await RestHelper.SearchById(2565225);
                 var employee = JsonConvert.DeserializeObject<EmployeeInfo>(jsonResponse);
                 Assert.IsNotNull(employee.Id);
                 Assert.IsNotNull(employee.Name);
